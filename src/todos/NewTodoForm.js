@@ -5,7 +5,7 @@ import "./NewTodoForm.css";
 
 const NewTodoForm = ({ todos, onCreatePressed }) => {
   const [inputValue, setInputValue] = useState("");
-  const handleInput = () => {
+  const handleInput = (e) => {
     setInputValue(e.target.value);
   };
   const handleClick = () => {
@@ -24,7 +24,7 @@ const NewTodoForm = ({ todos, onCreatePressed }) => {
         placeholder="Enter Todo"
         onChange={handleInput}
       />
-      <button className="new-todo-button" onCLick={handleClick}>
+      <button className="new-todo-button" onClick={handleClick}>
         Create Todo
       </button>
     </div>

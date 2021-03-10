@@ -1,8 +1,8 @@
 import React from "react";
 import "./TodoListItem.css";
 
-const TodoListItem = ({ todo, onRemovedPressed }) => {
-  const handleClick = () => onRemovedPressed(todo.text);
+const TodoListItem = ({ todo, onRemovePressed }) => {
+  const handleClick = () => onRemovePressed(todo.text);
 
   return (
     <div className="todo-item-container">

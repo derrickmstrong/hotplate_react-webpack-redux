@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import NewTodoForm from "./NewTodoForm";
 import TodoListItem from "./TodoListItem";
-import removeTodo from './actions'
+import { removeTodo } from './actions'
 import "./TodoListItem.css";
 
 const TodoList = ({ todos = [{ text: "Hello" }], onRemovePressed }) => (
