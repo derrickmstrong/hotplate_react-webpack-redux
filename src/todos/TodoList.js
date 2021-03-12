@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import NewTodoForm from "./NewTodoForm";
 import TodoListItem from "./TodoListItem";
-import { getTodos, getTodosLoading } from './selectors'
+import { getTodos, getTodosLoading, getCompletedTodos, getIncompleteTodos } from './selectors'
 // import { removeTodo, completedTodo } from "./actions";
 // import { completedTodo } from "./actions";
 import { displayAlert, loadTodos, removeTodoRequest, completedRequest } from "./thunks";
@@ -10,12 +10,14 @@ import "./TodoList.css";
 import { isLoading } from "./reducers";
 
 const TodoList = ({
-  todos = [],
+  // todos = [],
   onRemovePressed,
   onCompletedPressed,
   // onDisplayAlertClicked,
   isLoading,
-  startLoadingTodos
+  startLoadingTodos,
+  completedTodos,
+  incompleteTodos,
 }) => {
 
 useEffect(() => {
@@ -26,7 +28,15 @@ useEffect(() => {
   const content = (
     <div className="list-wrapper">
       <NewTodoForm />
-      {todos.map((todo) => (
+      <h2>Incomplete</h2>
+      {incompleteTodos.map(todo => (
+      <TodoListItem
+      todo={todo}
+      onRemovePressed={onRemovePressed}
+      onCompletedPressed={onCompletedPressed} />
+      ))}
+      <h2>Completed</h2>
+      {completedTodos.map((todo) => (
         <TodoListItem
           todo={todo}
           onRemovePressed={onRemovePressed}
@@ -42,7 +52,9 @@ useEffect(() => {
 const mapStateToProps = (state) => ({
   // todos: state.todos,
   // isLoading: state.isLoading,
-  todos: getTodos(state),
+  // todos: getTodos(state),
+  completedTodos: getCompletedTodos(state),
+  incompleteTodos: getIncompleteTodos(state),
   isLoading: getTodosLoading(state),
 });
 
