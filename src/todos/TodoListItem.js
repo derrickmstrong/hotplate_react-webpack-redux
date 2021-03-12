@@ -2,8 +2,10 @@ import React from "react";
 import "./TodoListItem.css";
 
 const TodoListItem = ({ todo, onRemovePressed, onCompletedPressed }) => {
-  const handleRemove = () => onRemovePressed(todo.text);
-  const handleCompleted = () => onCompletedPressed(todo.text);
+  // const handleRemove = () => onRemovePressed(todo.text);
+  const handleRemove = () => onRemovePressed(todo.id);
+  // const handleCompleted = () => onCompletedPressed(todo.text);
+  const handleCompleted = () => onCompletedPressed(todo.id);
 
   return (
     <div className="todo-item-container">
