@@ -16,7 +16,7 @@ export const fetchPost = () => async (dispatch) => {
   } catch (error) {
     dispatch({
       type: ActionTypes.FETCH_POSTS_FAILED,
-      payload: error.message,
+      payload: error,
     });
   }
 };
