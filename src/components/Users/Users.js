@@ -14,7 +14,7 @@ const Users = ({ isLoading, users, error, getUsers }) => {
 
     return users.map(user => {
       return (
-        <div>
+        <div key={user.id}>
           <h1>{user.name}</h1>
           <p>Username: {user.username}</p>
           <p>Email: {user.email.toLowerCase()}</p>
