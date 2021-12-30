@@ -1,5 +1,4 @@
 import React from "react";
-import { hot } from "react-hot-loader";
 import "./App.css";
 import { Posts } from "./components/Posts";
 import { Users } from "./components/Users";
@@ -16,4 +15,4 @@ const App = () => {
   );
 };
 
-export default hot(module)(App);
+export default App;
