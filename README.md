@@ -16,7 +16,7 @@
     <img src="./src/images/screenshot.png" alt="Screenshot" width="75%">
   </a>
 
-<h2 align="center">React + Webpack + Redux custom boilerplate</h2>
+<h2 align="center">Custom React + Webpack + Redux boilerplate</h2>
 
   <p align="center">
     This is a custom boilerplate that I created to quickly spin up a React + Redux project. 
@@ -67,7 +67,7 @@
 This is a custom boilerplate that I created to quickly spin up a React + Redux project.
 <!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
 
- <!-- `derrickmstrong`, `hotplate_react_webpack_redux`, `dmstr0ng`, `derrickmstrong`, `gmail`, `derrickmstrong`, `hotplate_react_webpack_redux`, `This is a custom boilerplate that I created to quickly spin up a React + Redux project. ` -->
+ <!-- `derrickmstrong`, `hotplate_react_webpack_redux`, `dmstr0ng`, `derrickmstrong`, `derrickmstrong`, `hotplate_react_webpack_redux`, `This is a custom boilerplate that I created to quickly spin up a React + Redux project. ` -->
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
